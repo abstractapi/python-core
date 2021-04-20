@@ -2,6 +2,7 @@ build
 dist
 **/__pycache__
 python_core.egg-info
+abstract_python_core.egg-info
 dev_test.py
 .vscode
 *.history

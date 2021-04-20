@@ -7,11 +7,11 @@ with open('README.md', 'r') as readme_file:
 requirements = ['requests>=2']
 
 setup(
-    name='python_core',
+    name='abstract_python_core',
     version='0.1.0',
     author='Benjamin Bouchet',
-    author_email='<libraries@abstractapi.com>',
-    description='HTTP client to call AbstractAPI endpoints.',
+    author_email='libraries@abstractapi.com',
+    description='AbstractAPI Python Core Library - Used by the other Abstract API libraries.',
     long_description=readme,
     long_description_content_type='text/markdown',
     url='https://github.com/abstractapi/python-core',
