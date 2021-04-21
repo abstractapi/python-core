@@ -3,7 +3,7 @@ name: Unit test
 on: [push, pull_request]
 
 jobs:
-  build:
+  unit_test:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
