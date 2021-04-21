@@ -24,4 +24,3 @@ jobs:
       - name: Run test
         run: |
           python3 -m unittest tests/test_python_core.py
-
