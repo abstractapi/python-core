@@ -10,7 +10,7 @@ class HttpEndpoint:
     """
 
 
-    def __init__(self, endpoint_subdomain, global_req_params):
+    def __init__(self, endpoint_subdomain, global_req_params, path=""):
         """
         HttpEndpoint class, one instance per endpoint, offers get/post HTTP methods
         and handles both HTTP errors and API errors
@@ -21,7 +21,7 @@ class HttpEndpoint:
         """
 
         self.endpoint_subdomain = endpoint_subdomain
-        self.endpoint = f"https://{endpoint_subdomain}.abstractapi.com/v1/"
+        self.endpoint = f"https://{endpoint_subdomain}.abstractapi.com/v1/{path}"
         self.global_req_params = global_req_params
 
 

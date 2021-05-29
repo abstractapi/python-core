@@ -16,6 +16,27 @@ class TestHttpEndpoint(unittest.TestCase):
             "https://phonevalidation.abstractapi.com/v1/", {'lang' : 'python'}
         )
 
+    def test_default_endpoint(self):
+
+        endpoint = HttpEndpoint(
+            endpoint_subdomain='phonevalidation',
+            global_req_params={
+                'lang' : 'python'
+            }
+        )
+        self.assertEqual(endpoint.endpoint, 'https://phonevalidation.abstractapi.com/v1/')
+
+    def test_endpoint_with_path(self):
+
+        endpoint = HttpEndpoint(
+            endpoint_subdomain='phonevalidation',
+            global_req_params={
+                'lang' : 'python'
+            },
+            path='sub-dir/'
+        )
+        self.assertEqual(endpoint.endpoint, 'https://phonevalidation.abstractapi.com/v1/sub-dir/')
+
     def test_no_config(self):
 
         try:
